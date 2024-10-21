@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automat z przekąskami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="vending-machine">
+        <h1>Automat z przekąskami</h1>
+        
+        <!-- Ekran wyboru kwoty -->
+        <div class="screen">
+            <p id="message">Wybierz kwotę:</p>
+            <div class="coin-selection">
+                <button onclick="selectCoin(1)">1 PLN</button>
+                <button onclick="selectCoin(2)">2 PLN</button>
+                <button onclick="selectCoin(5)">5 PLN</button>
+            </div>
+        </div>
+
+        <!-- Slot na monety -->
+        <div class="coin-slot">
+            <div id="coin" class="coin"></div>
+        </div>
+
+        <!-- Przyciski akcji -->
+        <div class="buttons">
+            <button onclick="insertCoin()">Wrzuc monetę</button>
+        </div>
+
+        <!-- Wyświetlanie produktów z cenami -->
+        <div class="products-list">
+            <h2>Dostępne produkty</h2>
+            <ul id="products">
+                <li>nr.11 Snickers - 5 PLN</li>
+                <li>nr.12 Mars - 4 PLN</li>
+                <li>nr.13 Twix - 4 PLN</li>
+                <li>nr.14 Chipsy - 3 PLN</li>
+                <li>nr.15 Coca-Cola - 6 PLN</li>
+                <li>nr.16 Sprite - 6 PLN</li>
+                <li>nr.17 Woda - 3 PLN</li>
+                <li>nr.18 Sok - 4 PLN</li>
+                <li>nr.19 Kawa - 7 PLN</li>
+            </ul>
+        </div>
+
+        <!-- Wybór produktu - Przyciski 1-9 -->
+        <div class="product-selection">
+            <p>Wybierz numer produktu:</p>
+            <div class="keypad">
+                <button onclick="enterNumber(1)">1</button>
+                <button onclick="enterNumber(2)">2</button>
+                <button onclick="enterNumber(3)">3</button>
+                <button onclick="enterNumber(4)">4</button>
+                <button onclick="enterNumber(5)">5</button>
+                <button onclick="enterNumber(6)">6</button>
+                <button onclick="enterNumber(7)">7</button>
+                <button onclick="enterNumber(8)">8</button>
+                <button onclick="enterNumber(9)">9</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
